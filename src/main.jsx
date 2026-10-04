@@ -236,17 +236,41 @@ function App() {
               MAŁY POMYSŁ. WSPÓLNA SPRAWA.
             </p>
             <h1 id="hero-title">
-              Twoje miasto.
-              <br />
-              Twój pomysł.
-              <br />
-              <span>Wspólna zmiana.</span>
+              Zamień swoje miasto <span>w planszę do gry.</span>
+              <span className="h1-sub">
+                Zmieniaj okolicę i zgłaszaj inicjatywy oraz usterki w kilka
+                sekund.
+              </span>
             </h1>
-            <p className="hero-lead">
-              Ta ławka. Ten skwer. Twoja okolica.
-              <br className="wide-only" /> Zamień to, co zauważasz, w
-              inicjatywę, którą mogą poprzeć sąsiedzi.
-            </p>
+            <h2 className="hero-lead">
+              Masz pomysł na nowy skwer albo widzisz dziurę w chodniku? Zrób
+              zdjęcie. Sztuczna inteligencja rozpozna problem i uporządkuje
+              zgłoszenie, bez biurokracji. Za aktywność zdobywasz punkty i
+              wymieniasz je na nagrody od lokalnych firm.
+            </h2>
+            <ul className="hero-audience" aria-label="Dla kogo, po co i kiedy">
+              <li>
+                <Users size={18} />
+                <span>
+                  <strong>Dla kogo?</strong> Dla mieszkańców, którym zależy na
+                  swojej okolicy.
+                </span>
+              </li>
+              <li>
+                <Heart size={18} />
+                <span>
+                  <strong>Po co?</strong> Żeby pomysły zbierały poparcie
+                  sąsiadów, a usterki szybko trafiały do miasta.
+                </span>
+              </li>
+              <li>
+                <Camera size={18} />
+                <span>
+                  <strong>Kiedy?</strong> Od razu na miejscu: na spacerze, w
+                  drodze do pracy, gdy coś zauważysz.
+                </span>
+              </li>
+            </ul>
             <div className="hero-actions">
               <Cta onDemo={openDemo} />
               <a className="text-link" href="#jak-to-dziala">
@@ -340,8 +364,8 @@ function App() {
               <strong>Ty znasz okolicę. Bóbr pomoże ułożyć opis.</strong>
               <br />
               <span>
-                W obecnym demo rozmowa jest symulacją. Docelowo AI dopyta o
-                szczegóły — decyzja o publikacji zostaje po Twojej stronie.
+                AI rozpoznaje zdjęcie i dopyta o szczegóły. Decyzja o
+                publikacji zawsze zostaje po Twojej stronie.
               </span>
             </p>
             <a
@@ -460,6 +484,32 @@ function App() {
               Jeden głos wystarczy, żeby zobaczyć zmianę statusu w demo.
             </p>
           </div>
+          <div className="app-screens">
+            <figure>
+              <div className="phone-shell">
+                <img
+                  src={asset("app-list.png")}
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  alt="Ekran aplikacji SiteQuest: lista inicjatyw w promieniu 500 m z licznikami głosów"
+                />
+              </div>
+              <figcaption>Inicjatywy w okolicy</figcaption>
+            </figure>
+            <figure>
+              <div className="phone-shell">
+                <img
+                  src={asset("app-detail.webp")}
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  alt="Ekran aplikacji SiteQuest: szczegóły inicjatywy i głosowanie 9/10"
+                />
+              </div>
+              <figcaption>Szczegóły i głosowanie</figcaption>
+            </figure>
+          </div>
           <div className="app-showcase">
             <div className="showcase-map">
               <MapDrawing />
@@ -560,9 +610,8 @@ function App() {
               <div className="status-note">
                 <span className="status-label">STATUS DEMO</span>
                 <p>
-                  Rozmowa w aplikacji korzysta z przygotowanych pytań.
-                  Połączenie z AI jest planowane. Punkty, nagrody i głosy
-                  działają lokalnie.
+                  W aplikacji pytania i opis przygotowuje AI na podstawie
+                  Twojego zdjęcia. Podgląd na tej stronie to lokalna symulacja.
                 </p>
               </div>
             </div>

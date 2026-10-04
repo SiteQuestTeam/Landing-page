@@ -314,6 +314,41 @@ section[id] {
   margin-top: 28px;
   line-height: 1.75;
 }
+.hero h1 .h1-sub {
+  display: block;
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: clamp(19px, 1.6vw, 24px);
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  font-weight: 700;
+}
+h2.hero-lead {
+  font-family: "Inter Variable", Inter, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 0;
+}
+.hero-audience {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  max-width: 520px;
+}
+.hero-audience li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.hero-audience svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--signal);
+}
 .hero-actions {
   display: flex;
   align-items: center;
@@ -2087,4 +2122,27 @@ section[id] {
 }
 .final-card .caption {
   color: #526175;
+}
+
+.app-screens {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.app-screens figure {
+  margin: 0;
+  width: min(280px, 100%);
+  text-align: center;
+}
+.app-screens .phone-shell img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.app-screens figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
 }
